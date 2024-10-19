@@ -43,6 +43,40 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+
+.test-img {
+    width: 45px; /* Adjust size as needed */
+    height: 45px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image fits well within the circle */
+    margin-top: 8px; /* Space between image and text */
+}
+
+/* welcome section */
+.welcome {
+    border-bottom: 1px solid #ddd;
+    background-color: #ddd;
+    padding: 10px 0px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.welcome h3 {
+    font-size: 25px;
+    color: #2F4F7F;
+    margin-left: 100px;
+    text-align: center;
+}
+
+.welcome p {
+    font-size: 18px;
+    color: #111;
+    margin-left: 100px;
+    text-align: center;
+}
     
 /* Hero Section */
 /* Hero section styling */

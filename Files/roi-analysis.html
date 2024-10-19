@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketMax/Analysis</title>
+    <link rel="stylesheet" href="../Styles/roi.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>ROI Analysis</h1>
+        <form id="roiForm">
+            <label for="investment">Initial Investment ($):</label>
+            <input type="number" id="investment" required>
+            
+            <label for="revenue">Expected Annual Revenue ($):</label>
+            <input type="number" id="revenue" required>
+            
+            <label for="expenses">Expected Annual Expenses ($):</label>
+            <input type="number" id="expenses" required>
+            
+            <label for="years">Number of Years:</label>
+            <input type="number" id="years" required>
+            
+            <button type="submit">Calculate ROI</button>
+        </form>
+        
+        <div id="result">
+            <canvas id="roiChart"></canvas>
+            <p id="feedback"></p>
+        </div>
+    </div>
+
+    <script src="../Script/roi.js"></script>
+</body>
+</html>
