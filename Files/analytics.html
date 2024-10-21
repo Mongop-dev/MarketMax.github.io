@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketMax Analytics</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <link rel="stylesheet" href="../Styles/analytics.css">
+</head>
+<body>
+    <header>
+        <h1>MarketMax Analytics Dashboard</h1>
+    </header>
+    
+    <div class="container">
+        <div class="dashboard">
+            <div class="card">
+                <h2>Total Revenue</h2>
+                <div class="metric">$<span id="totalRevenue">0</span></div>
+                <div class="metric-change"><span id="revenueChange">0</span>%</div>
+            </div>
+            
+            <div class="card">
+                <h2>Conversion Rate</h2>
+                <div class="metric"><span id="conversionRate">0</span>%</div>
+                <div class="metric-change"><span id="conversionChange">0</span>%</div>
+            </div>
+            
+            <div class="card">
+                <h2>Average Order Value</h2>
+                <div class="metric">$<span id="avgOrderValue">0</span></div>
+                <div class="metric-change"><span id="aovChange">0</span>%</div>
+            </div>
+            
+            <div class="card">
+                <h2>Revenue by Channel</h2>
+                <div class="chart-container">
+                    <canvas id="revenueByChannel"></canvas>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Sales Trend</h2>
+                <div class="chart-container">
+                    <canvas id="salesTrend"></canvas>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Top Selling Products</h2>
+                <ul id="topProducts"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Script/analytics.js"></script>
+</body>
+</html>
