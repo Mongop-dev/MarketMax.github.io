@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const userFullNameElement = document.getElementById('userFullName');
-    const logoutButton = document.getElementById('logoutButton');
+    const logoutButton = document.getElementById('logout');
 
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
@@ -12,6 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     logoutButton.addEventListener('click', () => {
         localStorage.removeItem('currentUser');
-        window.location.href = 'login.html';
+        window.location.href = '../index.html';
     });
 });

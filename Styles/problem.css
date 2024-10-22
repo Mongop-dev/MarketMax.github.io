@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    padding-right: 200px;
+}
+
+h2 {
+    color: #2F4F7F;
+    margin-bottom: 1rem;
+    font-size: 40px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+button {
+    background-color: #2F4F7F;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #007bff;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#contact {
+    margin-left: -150px;
+}
+
+#contact .container {
+    width: 100%;
+    /* max-width: 800px; */
+    margin: 0 auto;
+    background-color: #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Rounded corners */
+    padding: 30px;
+}
+
+
+/* Form elements styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Align name and email side by side */
+.inline-fields {
+    display: flex;
+    gap: 20px; /* Space between the fields */
+}
+
+.inline-fields .form-group {
+    flex: 1; /* Make the fields evenly spaced */
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600; /* Slightly bold for emphasis */
+    margin-bottom: 8px;
+    color: #333; /* Dark text color */
+}
+
+.form-group input,
+.form-group select option,
+.form-group textarea {
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    border: 1px solid #ddd; /* Light border color */
+    border-radius: 5px; /* Rounded input corners */
+    background-color: #FFF; /* Subtle background color for inputs */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Glow effect on focus */
+    outline: none; /* Remove default focus outline */
+}
+
+/* Button styling */
+button[type="submit"] {
+    padding: 12px 24px;
+    background-color: #2F4F7F; /* Primary blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Success/Error message area */
+#message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333; /* Dark text color */
+}
