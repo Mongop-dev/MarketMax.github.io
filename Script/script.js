@@ -82,7 +82,7 @@ const protectedRoutes = [
     '/dashboard',
     '/payment',
     '/roi-analysis',
-    '/social-media',
+    '/sMedia',
     '/analytics'
 ];
 
