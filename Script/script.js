@@ -70,3 +70,104 @@ document.addEventListener('DOMContentLoaded', function() {
         loginButton.addEventListener('click', openLoginPage);
     }
 });
+
+// Check if user is logged in
+let isAuthenticated = false;
+
+// Store the current user's data
+let currentUser = null;
+
+// List of protected routes/pages
+const protectedRoutes = [
+    '/dashboard',
+    '/payment',
+    '/roi-analysis',
+    '/social-media',
+    '/analytics'
+];
+
+// Function to check if the current route is protected
+function isProtectedRoute(path) {
+    return protectedRoutes.some(route => path.startsWith(route));
+}
+
+// Function to check authentication status
+function checkAuth() {
+    // Check if user has a valid session token in localStorage
+    const token = localStorage.getItem('userToken');
+    const userData = localStorage.getItem('userData');
+    
+    if (token && userData) {
+        isAuthenticated = true;
+        currentUser = JSON.parse(userData);
+        return true;
+    }
+    return false;
+}
+
+// Function to handle login
+function login(username, password) {
+    // Add your login logic here (e.g., API call to verify credentials)
+    // This is a simplified example
+    if (username && password) {
+        // Simulate successful login
+        const token = 'example-token-' + Math.random();
+        const userData = { username: username, id: Date.now() };
+        
+        // Store auth data
+        localStorage.setItem('userToken', token);
+        localStorage.setItem('userData', JSON.stringify(userData));
+        
+        isAuthenticated = true;
+        currentUser = userData;
+        return true;
+    }
+    return false;
+}
+
+// Function to handle logout
+function logout() {
+    localStorage.removeItem('userToken');
+    localStorage.removeItem('userData');
+    isAuthenticated = false;
+    currentUser = null;
+    window.location.href = '/login';
+}
+
+// Route protection function
+function protectRoute() {
+    const currentPath = window.location.pathname;
+    
+    // Check if current path is a protected route
+    if (isProtectedRoute(currentPath)) {
+        // If not authenticated, redirect to login
+        if (!checkAuth()) {
+            // Store the attempted URL to redirect back after login
+            localStorage.setItem('redirectUrl', currentPath);
+            window.location.href = '/login';
+            return false;
+        }
+    }
+    return true;
+}
+
+// Event listener for page loads
+document.addEventListener('DOMContentLoaded', () => {
+    protectRoute();
+});
+
+// Event listener for navigation
+window.addEventListener('popstate', () => {
+    protectRoute();
+});
+
+// Function to handle post-login redirect
+function handlePostLoginRedirect() {
+    const redirectUrl = localStorage.getItem('redirectUrl');
+    if (redirectUrl) {
+        localStorage.removeItem('redirectUrl');
+        window.location.href = redirectUrl;
+    } else {
+        window.location.href = '/dashboard';
+    }
+}

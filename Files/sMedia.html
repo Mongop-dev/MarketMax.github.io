@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketMax/Social Media</title>
+    <link rel="stylesheet" href="../Styles/sMedia.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-header">
+            <h1 class="dashboard-title">Social Media Dashboard</h1>
+        </div>
+
+        <div class="tab-container">
+            <div class="tabs">
+                <button class="tab active" data-tab="overview">Overview</button>
+                <button class="tab" data-tab="analytics">Analytics</button>
+                <button class="tab" data-tab="engagement">Engagement</button>
+            </div>
+
+            <div class="tab-content active" id="overview">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Facebook Followers</h3>
+                        <div class="stat-value">23.5K</div>
+                        <div class="growth">+2.4% vs last month</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Twitter Followers</h3>
+                        <div class="stat-value">18.2K</div>
+                        <div class="growth">+1.8% vs last month</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Instagram Followers</h3>
+                        <div class="stat-value">45.8K</div>
+                        <div class="growth">+3.2% vs last month</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>LinkedIn Followers</h3>
+                        <div class="stat-value">12.4K</div>
+                        <div class="growth">+1.5% vs last month</div>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <canvas id="growthChart"></canvas>
+                </div>
+            </div>
+
+            <div class="tab-content" id="analytics">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Reach</h3>
+                        <div class="stat-value">89.2K</div>
+                        <div class="growth">+12.3% vs last month</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Engagement Rate</h3>
+                        <div class="stat-value">4.6%</div>
+                        <div class="growth">+0.8% vs last month</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Click-through Rate</h3>
+                        <div class="stat-value">2.8%</div>
+                        <div class="growth">+0.5% vs last month</div>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <canvas id="analyticsChart"></canvas>
+                </div>
+            </div>
+
+            <div class="tab-content" id="engagement">
+                <div class="chart-card">
+                    <canvas id="engagementChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Script/sMedia.js"></script>
+</body>
+</html>

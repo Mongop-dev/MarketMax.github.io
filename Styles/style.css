@@ -514,6 +514,10 @@ blockquote cite {
         text-align: center;
     }
 
+    #hero .container .slideshow {
+        display: none;
+    }
+
     .content {
         margin-top: 80px;
     }
